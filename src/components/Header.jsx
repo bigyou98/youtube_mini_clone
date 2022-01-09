@@ -3,7 +3,12 @@ import { BsYoutube } from "react-icons/bs";
 import { BiSearch } from "react-icons/bi";
 import headerCss from "./header.module.css";
 
-export const Header = ({ handleInput, handleSearchBtn }) => {
+export const Header = ({ handleInput, handleSearchBtn, keyword }) => {
+  const pressEnter = (e) => {
+    if (e.key === "Enter") {
+      handleSearchBtn();
+    }
+  };
   return (
     <div className={headerCss.wrapper}>
       <div className={headerCss.logoWrapper}>
@@ -16,6 +21,8 @@ export const Header = ({ handleInput, handleSearchBtn }) => {
           className={headerCss.input}
           placeholder="Search..."
           onChange={handleInput}
+          onKeyPress={pressEnter}
+          value={keyword}
         />
         <button className={headerCss.searchBtn} onClick={handleSearchBtn}>
           <BiSearch />

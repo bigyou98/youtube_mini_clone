@@ -12,9 +12,8 @@
   padding: 20px;
   width: 48%;
   height: 200px;
-  /* padding:20px; */
   margin: 10px;
-  background-color: wheat;
+  background-color: rgb(56, 133, 69);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
