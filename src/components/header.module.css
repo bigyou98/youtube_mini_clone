@@ -9,6 +9,7 @@
 .logoWrapper {
   display: flex;
   margin-left: 12px;
+  cursor: pointer;
 }
 .youtubeLogo {
   color: red;

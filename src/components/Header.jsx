@@ -2,6 +2,7 @@ import React from "react";
 import { BsYoutube } from "react-icons/bs";
 import { BiSearch } from "react-icons/bi";
 import headerCss from "./header.module.css";
+import { useNavigate } from 'react-router-dom';
 
 export const Header = ({ handleInput, handleSearchBtn, keyword }) => {
   const pressEnter = (e) => {
@@ -9,10 +10,11 @@ export const Header = ({ handleInput, handleSearchBtn, keyword }) => {
       handleSearchBtn();
     }
   };
+  const navigate = useNavigate();
   return (
     <div className={headerCss.wrapper}>
-      <div className={headerCss.logoWrapper}>
-        <BsYoutube className={headerCss.youtubeLogo} />
+      <div className={headerCss.logoWrapper} onClick={()=>navigate('/')}>
+        <BsYoutube className={headerCss.youtubeLogo}  />
         <span className={headerCss.youtubeText}>Youtube</span>
       </div>
 

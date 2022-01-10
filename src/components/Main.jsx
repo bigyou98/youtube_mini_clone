@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import "./app.css";
-import { Header, List } from "./components";
-import { youtubeApi } from "./apis/index";
+import React, { useEffect, useState } from "react";
+import mainCss from "./main.module.css";
+import { Header, List } from ".";
+import { youtubeApi } from "../apis/index";
 
-function App() {
+export const Main = () => {
   // 여기에서 검색할 키워드 state 다룬다.
   const [keyword, setKeyword] = useState("");
   const [listItems, setListItems] = useState([]);
@@ -43,7 +43,7 @@ function App() {
   }, []);
 
   return (
-    <div className="Wrapper">
+    <div className={mainCss.wrapper}>
       <Header
         handleInput={handleInput}
         handleSearchBtn={handleSearchBtn}
@@ -52,6 +52,4 @@ function App() {
       <List listItems={listItems} />
     </div>
   );
-}
-
-export default App;
+};
