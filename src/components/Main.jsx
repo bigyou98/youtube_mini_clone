@@ -12,7 +12,7 @@ export const Main = () => {
   const [currentVideo, setCurrentVideo] = useState({});
 
   const defaultVideos = 26;
-  console.log(currentVideo);
+
   const handleInput = (e) => {
     setKeyword(e.target.value);
   };
@@ -57,10 +57,16 @@ export const Main = () => {
       {Object.keys(currentVideo).length === 0 ? (
         <List listItems={listItems} setCurrentVideo={setCurrentVideo} />
       ) : (
-        <>
-          <Detail currentVideo={currentVideo} />
-          <List listItems={listItems} setCurrentVideo={setCurrentVideo} />
-        </>
+        <Detail
+          currentVideo={currentVideo}
+          listItems={listItems}
+          setCurrentVideo={setCurrentVideo}
+          id={
+            currentVideo.id instanceof Object
+              ? currentVideo.id.videoId
+              : currentVideo.id
+          }
+        />
       )}
     </div>
   );

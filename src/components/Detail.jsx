@@ -1,10 +1,9 @@
 import React from "react";
-import { Header } from ".";
+import { List } from ".";
 import detailCss from "./detail.module.css";
 
-export const Detail = ({ currentVideo }) => {
+export const Detail = ({ currentVideo, listItems, setCurrentVideo, id }) => {
   const {
-    id,
     snippet: { channelTitle, description, title, publishedAt, tags },
   } = currentVideo;
 
@@ -12,15 +11,32 @@ export const Detail = ({ currentVideo }) => {
 
   return (
     <div className={detailCss.wrapper}>
-      <iframe
-        width="800"
-        height="400"
-        src={currentUrl}
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      />
+      <div className={detailCss.contentBox}>
+        <iframe
+          className={detailCss.iframe}
+          src={currentUrl}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+        <div className={detailCss.descriptionBox}>
+          <div className={detailCss.title}>{title}</div>
+          <div className={detailCss.channelTitle}>{channelTitle}</div>
+          {publishedAt}
+          <br />
+          {tags}
+          <br />
+          {description}
+        </div>
+      </div>
+      <div className={detailCss.list}>
+        <List
+          listItems={listItems}
+          setCurrentVideo={setCurrentVideo}
+          miniThum={"detail"}
+        />
+      </div>
     </div>
   );
 };
