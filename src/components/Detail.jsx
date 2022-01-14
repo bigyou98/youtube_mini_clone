@@ -9,6 +9,9 @@ export const Detail = ({ currentVideo, listItems, setCurrentVideo, id }) => {
 
   const currentUrl = `https://www.youtube.com/embed/${id}`;
 
+  console.log(id);
+  console.log(currentVideo);
+
   return (
     <div className={detailCss.wrapper}>
       <div className={detailCss.contentBox}>

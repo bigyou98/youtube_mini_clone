@@ -24,6 +24,7 @@ export const Main = () => {
       const {
         data: { items },
       } = await youtubeApi.search(defaultVideos, keyword);
+
       setListItems(items);
       setKeyword("");
     } catch (e) {
