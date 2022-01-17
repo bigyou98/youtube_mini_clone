@@ -1,10 +1,9 @@
 .wrapper {
   display: flex;
-  border: 1px solid black;
-  align-items: center;
-  background-color: black;
-  width: 100%;
-  padding: 12px;
+  height: 4rem;
+  padding: 0.8em 1em;
+  background: black;
+  color: white;
 }
 .logoWrapper {
   display: flex;
@@ -13,7 +12,6 @@
 }
 .youtubeLogo {
   color: red;
-  /* 이거 red로 하고싶은데 가운데 > 모양은 배경색 따라가서 어케할지 모르겠다. */
   font-size: 3rem;
 }
 .youtubeText {
@@ -29,17 +27,12 @@
   margin-left: 20px;
 }
 .input {
-  width: 90%;
-  height: 40px;
-  padding-left: none;
-  font-size: 1.4rem;
+  flex-basis: 100%;
+  font-size: 1.2rem;
+  outline: 0;
 }
 
 .searchBtn {
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: black;
-  background-color: rgb(118, 122, 122);
+  background-color: darkgrey;
+  outline: 0;
 }
