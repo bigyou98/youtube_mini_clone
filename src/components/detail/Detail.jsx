@@ -1,5 +1,5 @@
 import React from "react";
-import { List } from ".";
+import { List } from "components";
 import detailCss from "./detail.module.css";
 
 export const Detail = ({ currentVideo, listItems, setCurrentVideo, id }) => {

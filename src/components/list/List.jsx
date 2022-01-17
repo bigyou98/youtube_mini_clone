@@ -1,6 +1,6 @@
 import React from "react";
 import listCss from "./list.module.css";
-import { ListItem } from "./index";
+import { ListItem } from "components/index";
 
 export const List = ({ listItems, setCurrentVideo, miniThum }) => {
   return (

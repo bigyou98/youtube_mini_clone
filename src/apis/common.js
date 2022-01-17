@@ -1,5 +1,5 @@
 import axios from "axios";
-import { settings } from "../constants/index";
+import { settings } from "constants/settings";
 
 const common = {
   get: async (url) => {

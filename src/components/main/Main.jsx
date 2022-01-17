@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import mainCss from "./main.module.css";
-import { Detail, Header, List } from ".";
-import { youtubeApi } from "../apis/index";
+import { Detail, Header, List } from "components/index";
+import { youtubeApi } from "apis/index";
 
 export const Main = () => {
   // 여기에서 검색할 키워드 state 다룬다.

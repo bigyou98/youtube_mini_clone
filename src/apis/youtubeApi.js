@@ -1,5 +1,5 @@
 import api from "./common";
-import { settings } from "../constants/index";
+import { settings } from "constants/index";
 
 export const youtubeApi = {
   mostPopularVideos: async (params) => {
