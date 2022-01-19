@@ -5,9 +5,7 @@ export const ListItem = React.memo(
   ({ listItem, setCurrentVideo, miniThum }) => {
     const {
       title,
-      description,
-      publishedAt,
-      thumbnails: { high, maxres, medium, standard, default: defaultImg },
+      thumbnails: { medium, default: defaultImg },
       channelTitle,
     } = listItem.snippet;
 

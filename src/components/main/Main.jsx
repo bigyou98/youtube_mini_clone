@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import mainCss from "./main.module.css";
 import { Detail, Header, List } from "components/index";
 import { youtubeApi } from "apis/index";
@@ -11,9 +11,9 @@ export const Main = () => {
 
   const defaultVideos = 26;
 
-  const handleInput = (e) => {
+  const handleInput = useCallback((e) => {
     setKeyword(e.target.value);
-  };
+  }, []);
 
   const handleSearchBtn = async () => {
     try {
@@ -23,6 +23,7 @@ export const Main = () => {
 
       setListItems(items);
       setKeyword("");
+      setCurrentVideo({});
     } catch (e) {
       console.log(e);
     }
