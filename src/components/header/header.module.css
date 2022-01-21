@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  height: 4rem;
+  padding: 0.8em 1em;
+  background: black;
+  color: white;
+}
+.logoWrapper {
+  display: flex;
+  margin-left: 12px;
+  cursor: pointer;
+}
+.youtubeLogo {
+  color: red;
+  font-size: 3rem;
+}
+.youtubeText {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  margin-left: 4px;
+  margin-right: 16px;
+}
+.inputWrapper {
+  display: flex;
+  width: 90%;
+  margin-left: 20px;
+}
+.input {
+  flex-basis: 100%;
+  font-size: 1.2rem;
+  outline: 0;
+}
+
+.searchBtn {
+  background-color: darkgrey;
+  outline: 0;
+}

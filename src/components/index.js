@@ -1,5 +1,5 @@
-export { Header } from "./Header";
-export { List } from "./List";
-export { ListItem } from "./ListItem";
-export { Detail } from "./Detail";
-export { Main } from "./Main";
+export { Header } from "components/header/Header";
+export { List } from "components/list/List";
+export { ListItem } from "components/list/ListItem";
+export { Detail } from "components/detail/Detail";
+export { Main } from "components/main/Main";
