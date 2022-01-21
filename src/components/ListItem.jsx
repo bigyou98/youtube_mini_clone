@@ -3,9 +3,8 @@ import listCss from "./list.module.css";
 
 export const ListItem = React.memo(
   ({ listItem, setCurrentVideo, miniThum }) => {
-    const { title, description, publishedAt, thumbnails, channelTitle } =
-      listItem.snippet;
-    const { high, maxres, medium, standard, default: defaultImg } = thumbnails;
+    const { title, thumbnails, channelTitle } = listItem.snippet;
+    const { medium, default: defaultImg } = thumbnails;
 
     return (
       <>
