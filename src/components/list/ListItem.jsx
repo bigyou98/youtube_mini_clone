@@ -3,9 +3,11 @@ import listCss from "./list.module.css";
 
 export const ListItem = React.memo(
   ({ listItem, setCurrentVideo, miniThum }) => {
-    const { title, description, publishedAt, thumbnails, channelTitle } =
-      listItem.snippet;
-    const { high, maxres, medium, standard, default: defaultImg } = thumbnails;
+    const {
+      title,
+      thumbnails: { medium, default: defaultImg },
+      channelTitle,
+    } = listItem.snippet;
 
     return (
       <>
@@ -27,7 +29,7 @@ export const ListItem = React.memo(
             className={listCss.listItemWrapper}
             onClick={() => setCurrentVideo(listItem)}
           >
-            <img src={medium.url} alt="사진" />
+            <img src={medium.url} alt="사진" className={listCss.thumnail} />
             <div className={listCss.textBox}>
               <span className={listCss.title}>{title}</span>
               <br />
