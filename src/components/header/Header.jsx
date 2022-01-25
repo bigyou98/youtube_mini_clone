@@ -14,7 +14,6 @@ export const Header = ({
       handleSearchBtn();
     }
   };
-  console.log("qweqwe");
   return (
     <div className={headerCss.wrapper}>
       <div
